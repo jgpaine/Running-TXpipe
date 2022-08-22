@@ -6,18 +6,18 @@ git clone --recurse-submodules https://github.com/LSSTDESC/TXPipe
 
 cd TXPipe
 ./bin/install.sh
-You can now set up your environment using:
+#You can now set up your environment using:
 
 source ./conda/bin/activate
-which you should run each time you start a new terminal, from the TXPipe directory.
+#which you should run each time you start a new terminal, from the TXPipe directory.
 
-Running
-Download some test data:
+#Running
+#Download some test data:
 
 curl -O https://portal.nersc.gov/cfs/lsst/txpipe/data/example.tar.gz
 tar -zxvf example.tar.gz
 
-Now you have to install the depedances; 
+#Now you have to install the depedances; 
 $pip install ceci 
 $pip install parallel_statistics 
 $pip install tables_io
@@ -25,10 +25,11 @@ $pip install qp
 $pip install Qpy
 $ python setup.py egg_info 
 
-$pip install delightPZ - this one didn't work 
+$pip install delightPZ  #  this one didn't work 
 
 
-Make edits to txpipe/blinding.py and adding these lines just before line 70: 
+# Make edits to txpipe/blinding.py and adding these lines just before line 70: 
+
 # some kinds of crash like this one can mean that something you have recently printed that is waiting in a buffer to actually appear on the screen doesn't actually make it that far.  This makes sure that anything waiting to be printed gets printed now, before nay crash
 import sys
 sys.stdout.flush()
@@ -49,7 +50,6 @@ sys.stdout.flush()
 sys.stderr.flush()   
 
 
-
-Then run a pipeline on that data:
+#Then run a pipeline on that data:
 
 ceci examples/metadetect/pipeline.yml 
