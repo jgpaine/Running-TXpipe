@@ -30,23 +30,23 @@ $pip install delightPZ  #  this one didn't work
 
 # Make edits to txpipe/blinding.py and adding these lines just before line 70: 
 
-# some kinds of crash like this one can mean that something you have recently printed that is waiting in a buffer to actually appear on the screen doesn't actually make it that far.  This makes sure that anything waiting to be printed gets printed now, before nay crash
+####some kinds of crash like this one can mean that something you have recently printed that is waiting in a buffer to actually appear on the screen doesn't actually make it that far.  This makes sure that anything waiting to be printed gets printed now, before nay crash
 
 import sys
 sys.stdout.flush()
 sys.stderr.flush()  
 
-# This prints out the data points in the file so we can see if there is anything odd in them
+####This prints out the data points in the file so we can see if there is anything odd in them
 print("**** DATA POINTS ****")
 for d in blinded_sack.data:
     print(d)
 
-# The metadata feels like a place where something might go wrong, because we put lots of different kinds of information in it. So let's print that
+#### The metadata feels like a place where something might go wrong, because we put lots of different kinds of information in it. So let's print that
 print("**** METADATA ****")
 for k,v in blinded_sack.metadata.items():
     print(k, v, type(k), type(v))
 
-# Let's do this again. It can't hurt.
+#### Let's do this again. It can't hurt.
 sys.stdout.flush()
 sys.stderr.flush()   
 
