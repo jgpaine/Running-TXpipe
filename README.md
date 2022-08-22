@@ -19,7 +19,7 @@ tar -zxvf example.tar.gz
 
 #Now you have to install the depedances; 
 
-pip install ceci 
+pip install ceci a <br /> 
 pip install parallel_statistics 
 pip install tables_io
 pip install qp
