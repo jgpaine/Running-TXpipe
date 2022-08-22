@@ -19,12 +19,12 @@ tar -zxvf example.tar.gz
 
 #Now you have to install the depedances; 
 
-pip install ceci a <br /> 
-pip install parallel_statistics 
-pip install tables_io
-pip install qp
-pip install Qpy
- python setup.py egg_info 
+pip install ceci  <br /> 
+pip install parallel_statistics <br /> 
+pip install tables_io<br /> 
+pip install qp<br /> 
+pip install Qpy<br /> 
+ python setup.py egg_info <br /> 
 
 $pip install delightPZ  #  this one didn't work 
 
