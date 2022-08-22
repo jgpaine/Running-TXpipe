@@ -18,17 +18,18 @@ curl -O https://portal.nersc.gov/cfs/lsst/txpipe/data/example.tar.gz
 tar -zxvf example.tar.gz
 
 #Now you have to install the depedances; 
-$pip install ceci 
-$pip install parallel_statistics 
-$pip install tables_io
-$pip install qp
-$pip install Qpy
-$ python setup.py egg_info 
+
+pip install ceci 
+pip install parallel_statistics 
+pip install tables_io
+pip install qp
+pip install Qpy
+ python setup.py egg_info 
 
 $pip install delightPZ  #  this one didn't work 
 
 
-# Make edits to txpipe/blinding.py and adding these lines just before line 70: 
+### Make edits to txpipe/blinding.py and adding these lines just before line 70: 
 
 ####some kinds of crash like this one can mean that something you have recently printed that is waiting in a buffer to actually appear on the screen doesn't actually make it that far.  This makes sure that anything waiting to be printed gets printed now, before nay crash
 
