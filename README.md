@@ -25,6 +25,10 @@ pip install tables_io<br />
 pip install qp<br /> 
 pip install Qpy<br /> 
  python setup.py egg_info <br /> 
+ 
+ 
+ pip install threadpoolctl ceci sacc parallel_statistics git+git://github.com/LSSTDESC/gcr-catalogs#egg=GCRCatalogs  git+git://github.com/LSSTDESC/qp git+git://github.com/LSSTDESC/desc_bpz healsparse flexcode  xgboost==1.1.1  git+https://github.com/dask/dask-mpi  git+https://github.com/LSSTDESC/firecrown@v0.4 git+git://github.com/LSSTDESC/desc_bpz git+git://github.com/LSSTDESC/qp 
+ 
 
 $pip install delightPZ  #  this one didn't work 
 
